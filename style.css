@@ -1,0 +1,11 @@
+body{
+background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+display: block;
+height: 100%;
+width: 100;
+}
+.card-score{
+display: flex;
+width: 25%;
+float: right;
+}
