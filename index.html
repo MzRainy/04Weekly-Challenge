@@ -4,32 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./style.css">    
 </head>
 
 <body>
-    <div class="header" >
-        <h1>Week 4 Quiz</h1>
+    <header>
+        <div class= "Header">Code Quiz!</div>
+        <button class="start-button">Start</button>
+    </header>
+
+      <main>
+        <section>
+          <div class="quiz-rules">
+            <div class="quiz-rule-cont">Coding Quiz Rules</div>
+            <div class="list">
+            <div class="item">1. You will only have 1 minute to complete the quiz.</div>
+            <div class="item">2. You must answer every question.</div>
+            <div class="item">3. You will lose 2 seconds for every wrong answer.</div>
+            <div class="item">4. Record your initials at the end to enter the leader board</div>
+        </div>  
+        </div>
+        <div class="buttons">
+            <button class="exit">Exit Quiz</button>
+            <button class="resume">Resume Quiz</button>
+        </div>
+        </section>
+<!--Quiz section-->
+        <section>
+         <div class="quiz">
+            <header>
+                <div class="title">Coding Quiz</div>
+                <div class="timer">
+                    <div class="remaining_time">Time: </div>
+                    <div class="timer_secs">60</div> 
+                </div>
+
+            </header>
+         </div>  
+        </section>
+  <!--Quiz content-->
+        <section>
+         <div class="quiz_cont">
+
+         </div>
+         <div class="list_opt">
+
+         </div>
+          
+        </section>
+      </main>
+      <script src="assets/js/script.js"></script>
+      <footer>
+        <div class="question_num">
+        </div>
+        <button class="next">Next</button>
+      </footer>
+
+<!-- End of Test-->
+<div class="leader_box">
+    <div class="leader_box">
+        
+        </div>
+    <div class="test_comp">You've completed the quiz!</div>
+    <div class="score">
+
     </div>
-
-    <div>
-        <h3>#1 Which language structures a webpage?</h3>
-        <ul></ul>
-        <li>A. JavaScript</li>
-        <li>B. HTML</li>
-        <li>C. French</li>
-        <li>D. DOM</li>
-
-
-
-
-
-
-
-
-        <script src="./script.js"></script>  
+    <div class="initials">Enter your initials here:
 
     </div>
-    
-</body>
-</html>
+<div class="buttons">
+    <button class="retake">Retake Quiz</button>
+    <button class="quit">Exit Quiz</button>
+</div>  
+</div>
+
+
+
+  </body>
+  </html>
