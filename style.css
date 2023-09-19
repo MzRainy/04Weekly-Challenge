@@ -1,11 +1,208 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
 body{
 background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-display: block;
-height: 100%;
-width: 100;
+
 }
-.card-score{
-display: flex;
-width: 25%;
-float: right;
+
+::selection{
+    color:rgb(58, 58, 207);
+    background: #e2d1c3;
 }
+
+ .start-button,
+ .quiz-rules,
+ .quiz,
+ .buttons,
+ .leader_box {
+position:absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2),
+            0 6px 20px 0 rgb(0, 0, 0, 0.20);
+ }
+
+ .quiz-rules.activeQuizRule,
+ .quiz.activeQuiz,
+ .leader_box.activeLeader{
+    opacity: 1;
+    z-index: auto;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+ }
+
+ .start-button {
+    font-size: 25px;
+    font-weight: 600;
+    color: #e2d1c3;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5 px;
+    background-color:rgb(58, 58, 207);
+    cursor: pointer;
+ }
+
+ .quiz-rules {
+    width: 500px;
+    background-color:rgb(58, 58, 207);
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+ }
+
+ .quiz-rules .quiz-rule-cont {
+    height: 60px;
+    width: 100%;
+    border-bottom: 3px solid darkgoldenrod;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+ }
+
+ .quiz-rule-cont .list {
+    padding: 15px 30px;
+ }
+ .quiz-rules .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 3px solid darkgoldenrod;
+ }
+ .quiz-rules .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 3px solid  #e2d1c3;
+    transition: all 0.3s ease;
+}
+
+.quiz {
+    width: 500px;
+    background-color: rgb(58, 58, 207);
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    }
+
+ .quiz header {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background:rgb(58, 58, 207) ;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,0.1);
+ }
+
+ .quiz header .title {
+    font-size: 20px;
+    font-weight: 500;
+ }
+
+.quiz header .timer {
+    color:#e2d1c3;
+    background: rgb(58, 58, 207);
+    border: 1px solid goldenrod;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    }
+    
+.quiz header .timer .remaining_time{
+    font-weight: 300;
+    font-size: 15px;
+    user-select: none;
+ }
+ .quiz header .timer .timer_secs{
+    font-size: 18px;
+    height: 30px;
+    width: 45px;
+    color:rgb(0, 0, 0, 0.2);
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    background: goldenrod;
+    border: 1px solid goldenrod;
+    user-select: none;
+ }
+
+ .quiz header .time {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background:rgb(58, 58, 207);
+ }
+
+ section {
+    padding: 20px 30px 20px 30px;
+  
+ }
+
+ section .quiz_cont{
+    font-size: 25px;
+    font-weight: 500;
+ }
+
+ section .list_opt{
+    padding: 20px 0px;
+    display: block;
+ }
+ section .list_opt .options{
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    section .list_opt .option:hover{
+        color:rgb(58, 58, 207);        
+    }
+
+    section .list_opt .option.correct{
+        color: green;
+        border: 1px solid rgb(160, 160, 228) ;
+    }
+
+
+
+
+
+
+
+
